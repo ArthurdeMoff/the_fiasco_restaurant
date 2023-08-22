@@ -15,23 +15,33 @@ a {
 }
 
 .header {
-  background: url(img/eggs.jpg) center center / cover no-repeat;
+  background: 
+    linear-gradient(180deg, rgba(0, 0, 0, 0.92), rgba(54, 54, 54, 0.5) 39.24%, rgba(28, 28, 28, 0.4)),
+    url(img/eggs.jpg) center center / cover no-repeat;
   color: white
 }
 
 .topbar {
-  padding: 18px 0;
+  padding: 18px 20px;
   font-size: 14px;
   text-transform: uppercase;
   text-align: center;
 }
 
-.topbar a:hover {
+.topbar-nav {
+  text-align: right;
+}
+
+.topbar a {
+  text-decoration: none;
+}
+
+.nav-item a:hover {
   color: #C89446;
 }
 
 .logo {
-  margin-bottom: 15px;
+  margin-top: 9px;
 }
 
 .nav-item {
@@ -47,11 +57,70 @@ a {
 .baseline-welcome {
   font-family: 'Pinyon Script', serif;
   color: #C89446;
-  font-size: 3.75rem;
+  font-size: 2.2rem;
+  display: block;
+  line-height: 1;
 }
 
-@media only screen and (min-width: 920px) {
+.baseline-name {
+  display: block;
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: 700;
+  padding-bottom: 10px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.baseline-slogan {
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  display: block;
+  text-transform: uppercase;
+}
+
+.reservation-button:hover {
+  background: #C89446;
+  color: white;
+  transition-property: color, background-color;
+}
+
+@media only screen and (min-width: 600px) {
   html {
     font-size: 16px;
+  }
+
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1150px;
+    margin: 0, auto;
+  }
+
+  .reservation-button {
+    border: solid 1px #C89446;
+    padding: 7px 10px;
+  }
+
+  .baseline {
+    padding: 125px 0 227px;
+  }
+
+  .baseline-slogan {
+    font-size: 1.5rem;
+  }
+  .baseline-name {
+    font-size: 3.375rem;
+    letter-spacing: 12px;
+    padding-top: 8px;
+  }
+
+  .baseline-welcome {
+    font-size: 3.75rem;
+  }
+
+  .reservation-button {
+    margin-top: 0;
   }
 }
