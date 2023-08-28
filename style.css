@@ -36,7 +36,7 @@ img {
 }
 
 .topbar-nav {
-  text-align: right;
+  text-align: center;
 }
 
 .topbar a {
@@ -107,9 +107,7 @@ img {
   margin-bottom: 50px;
 }
 
-.block-left {
-  display: flex;
-}
+
 
 .title {
   font-size: 1.75rem;
@@ -168,6 +166,35 @@ img {
   text-align: center;
 }
 
+.ingredients-menu {
+  font-weight: 600;
+  color: #383838;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.ingredients-menu a {
+  display: inline-block;
+  margin: 0 20px;
+  text-decoration: none;
+}
+
+.ingredients-menu .active {
+  display: inline-block;
+  margin: 0 20px;
+  text-decoration: underline;
+  text-decoration-color: #C89446;
+}
+
+.ingredients-menu a:hover {
+  text-decoration: underline;
+  text-decoration-color: #C89446;
+}
+
+.block-body br {
+  display: none;
+}
+
 @media only screen and (min-width: 600px) {
   html {
     font-size: 16px;
@@ -207,8 +234,12 @@ img {
   }
 }
 
-@media only screen and (min-width: 960px) {
-.block {
+@media only screen and (min-width: 800px) {
+  .block-left {
+    display: flex;
+  }
+
+  .block {
   margin-bottom: 100px;
 }
 
