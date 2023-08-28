@@ -103,6 +103,12 @@ img {
   max-width: 960px;
 }
 
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1150px;
+}
+
 .block {
   margin-bottom: 50px;
 }
@@ -167,6 +173,7 @@ img {
 }
 
 .ingredients-menu {
+  margin: 40px 0;
   font-weight: 600;
   color: #383838;
   text-transform: uppercase;
@@ -175,7 +182,7 @@ img {
 
 .ingredients-menu a {
   display: inline-block;
-  margin: 0 20px;
+  margin: 0 10px;
   text-decoration: none;
 }
 
@@ -191,8 +198,38 @@ img {
   text-decoration-color: #C89446;
 }
 
-.block-body br {
-  display: none;
+.menu-summary-item {
+  padding-left: 120px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.menu-summary-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #383838;
+  padding-bottom: 0.75rem;
+  margin-bottom: 0;
+}
+
+.menu-summary p {
+  margin: 0;
+  padding-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.menu-summary-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+}
+
+.menu-summary-price {
+  font-family: 'Pinyon Script', serif;
+  font-size: 2.5rem;
+  color: #C89446;
+  line-height: 1;
 }
 
 @media only screen and (min-width: 600px) {
@@ -237,6 +274,10 @@ img {
 @media only screen and (min-width: 800px) {
   .block-left {
     display: flex;
+  }
+
+  .block-last {
+    margin-bottom: 60px;
   }
 
   .block {
@@ -306,5 +347,59 @@ img {
     background: 
       fixed top 95px right 0px url(img/oranges.jpg) no-repeat,
       fixed top 640px left 0px url(img/spices.jpg) no-repeat;
+  }
+
+  .ingredients-menu a {
+    margin: 0 30px;
+  }
+
+  .menu-summary {
+    padding: 85px 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .menu-summary-item {
+    padding-left: 192px;
+    width: calc(50% - 40px);
+    margin-bottom: 110px;
+  }
+
+  .menu-summary-item:nth-child(even) {
+    text-align: right;
+    padding-left: 0;
+    padding-right: 192px;
+  }
+
+  .menu-summary-item:nth-child(even) .menu-summary-img {
+    left: auto;
+    right: 0;
+  }
+
+  .menu-summary-img {
+    width: 160px;
+  }
+
+  .menu-summary-title {
+    margin-top: 0;
+    background: white;
+  }
+
+  .menu-summary p {
+    background: white;
+  }
+
+  .menu-summary::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 100px;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    border: solid 1px #C89446;
+    transform: translate(-52%, 0) rotate(45deg);
   }
 }
