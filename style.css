@@ -151,7 +151,17 @@ img {
 }
 
 .more::after {
-  content: ' >';
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 9px;
+  margin-left: 0.5em;
+  background: url(img/small-right.svg) center center no-repeat;
+  transition: transform .3s;
+}
+
+.more:hover::after {
+  transform: translateX(5px);
 }
 
 .block-img {
@@ -254,11 +264,96 @@ img {
   color: white;
   font-family: 'Source Sans Pro', serif;
   transition: background .3s, border-color .3s;
+  appearance: none;
+}
+
+.reservation select {
+  background: no-repeat right 0.5rem center url(img/fleche.svg);
 }
 
 .reservation input:focus, .reservation select:focus {
-  background: rgba(255, 255, 255, .1);
+  background-color: rgba(255, 255, 255, .1);
   border-color: #C89446;
+}
+
+.reservation .button {
+  width: 100%;
+}
+
+.button {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: white;
+  background: #C89446;
+  border: none;
+  border: solid 1px transparent;
+  padding: 11px 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.button:hover {
+  border: solid 1px #C89446;
+  background: transparent;
+}
+
+.reservation .block-center .block-body {
+  max-width: none;
+}
+
+.select option {
+  color: #000;
+}
+.recipes {
+  padding: 50px 0;
+}
+
+.recipes .more {
+  display: block;
+  text-align: right;
+  margin-top: 60px;
+}
+
+.recipes-list {
+  font-weight: 300;
+  font-size: 1.125rem;
+}
+
+.recipes-list strong {
+  color: #383838;
+  font-weight: 700;
+}
+
+.recipes-date strong {
+  font-size: 1.75rem;
+  line-height: 1.2;
+  display: block;
+  padding-bottom: 1em;
+}
+
+.recipes-list-item {
+  display: flex;
+  border-bottom: solid 1px #F2F2F2;
+  margin-top: 1em;
+}
+
+.recipes-list-item p {
+  margin: 0;
+}
+
+.recipes-list-item:last-child {
+  border-bottom: 0;
+}
+.recipes-list {
+  max-width: 920px;
+  margin-left: auto;
+}
+
+.recipes-date {
+  width: 60px;
+  flex: none;
+  line-height: 1;
 }
 
 @media only screen and (min-width: 600px) {
@@ -450,5 +545,53 @@ img {
 
   .reservation {
     padding: 100px 0;
+  }
+
+  .reservation-form-row {
+    margin: 64px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .reservation-form-row input, .reservation-form-row select {
+    width: calc(33.33% - 20px);
+    margin-bottom: 0;
+  }
+
+  .reservation .button {
+    width: calc(33.33% - 20px);
+  }
+
+  .recipes {
+    padding: 60px 0;
+  }
+
+  .recipes .title {
+    text-align: right;
+  }
+
+  .recipes .container > p {
+    text-align: right;
+    max-width: 716px;
+    margin-left: auto;
+  }
+
+  .recipes-date {
+    width: 95px;
+    flex: none;
+  }
+
+  .recipes-list {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+
+  .recipes-list-item {
+    margin-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .recipes-list-item:last-child {
+    padding: 0;
   }
 }
