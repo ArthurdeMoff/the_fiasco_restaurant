@@ -230,6 +230,37 @@ img {
   line-height: 1;
 }
 
+.reservation {
+  background: 
+    linear-gradient(180deg, rgba(0, 0, 0, 0.92), rgba(54, 54, 54, 0.5) 39.24%, rgba(28, 28, 28, 0.4)),
+    url(img/reservation.jpg) center center / cover no-repeat;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 50px 0;
+}
+
+.reservation .title {
+  color: white;
+}
+
+.reservation input, .reservation select {
+  padding: 0 0.5rem;
+  width: 100%;
+  margin-bottom: 15px;
+  border: solid 1px #C89446;
+  background: transparent;
+  text-transform: uppercase;
+  height: 40px;
+  font-size: 0.875rem;
+  color: white;
+  font-family: 'Source Sans Pro', serif;
+  transition: background .3s, border-color .3s;
+}
+
+.reservation input:focus, .reservation select:focus {
+  background: rgba(255, 255, 255, .1);
+  border-color: #C89446;
+}
+
 @media only screen and (min-width: 600px) {
   html {
     font-size: 16px;
@@ -399,5 +430,25 @@ img {
     height: 400px;
     border: solid 1px #C89446;
     transform: translate(-52%, 0) rotate(45deg);
+  }
+
+  .block-chief {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .block-chief .block-img::before {
+    display: none;
+  }
+
+  .block-chief .block-img {
+    flex: none;
+    width: 400px;
+    order: 2;
+  }
+
+  .reservation {
+    padding: 100px 0;
   }
 }
